@@ -1,21 +1,14 @@
-# CodeRabbit Pro
-
-This is an old version of [CodeRabbit](http://coderabbit.ai) and is now in the maintenance mode.
-We recommend installing the Pro version from [CodeRabbit](http://coderabbit.ai). The Pro version is a total redesign and offers significantly better reviews that learn from your usage and improve over time. CodeRabbit Pro is free for open source projects. 
-
-[![Discord](https://img.shields.io/badge/Join%20us%20on-Discord-blue?logo=discord&style=flat-square)](https://discord.gg/GsXnASn26c)
-
 # AI-based PR reviewer and summarizer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub](https://img.shields.io/github/last-commit/coderabbitai/ai-pr-reviewer/main?style=flat-square)](https://github.com/coderabbitai/ai-pr-reviewer/commits/main)
+[![GitHub](https://img.shields.io/github/last-commit/codevergehq/ai-pr-reviewer/main?style=flat-square)](https://github.com/codevergehq/ai-pr-reviewer/commits/main)
 
 ## Overview
 
-CodeRabbit `ai-pr-reviewer` is an AI-based code reviewer and summarizer for
-GitHub pull requests using OpenAI's `gpt-3.5-turbo` and `gpt-4` models. It is
-designed to be used as a GitHub Action and can be configured to run on every
-pull request and review comments
+CodeBot `ai-pr-reviewer` is an AI-based code reviewer and summarizer for GitHub
+pull requests using OpenAI's `gpt-3.5-turbo` and `gpt-4` models. It is designed
+to be used as a GitHub Action and can be configured to run on every pull request
+and review comments
 
 ## Reviewer Features:
 
@@ -50,14 +43,13 @@ configure the required environment variables, such as `GITHUB_TOKEN` and
 FAQs, you can refer to the sections below.
 
 - [Overview](#overview)
-- [Professional Version of CodeRabbit](#professional-version-of-coderabbit)
+- [Professional Version of CodeBot](#professional-version-of-CodeBot)
 - [Reviewer Features](#reviewer-features)
 - [Install instructions](#install-instructions)
-- [Conversation with CodeRabbit](#conversation-with-coderabbit)
+- [Conversation with CodeBot](#conversation-with-CodeBot)
 - [Examples](#examples)
 - [Contribute](#contribute)
 - [FAQs](#faqs)
-
 
 ## Install instructions
 
@@ -87,7 +79,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: coderabbitai/ai-pr-reviewer@latest
+      - uses: codevergehq/ai-pr-reviewer@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -130,13 +122,13 @@ value. For example, to review docs/blog posts, you can use the following prompt:
 
 ```yaml
 system_message: |
-  You are `@coderabbitai` (aka `github-actions[bot]`), a language model
+  You are `@CodeBot` (aka `github-actions[bot]`), a language model
   trained by OpenAI. Your purpose is to act as a highly experienced
   DevRel (developer relations) professional with focus on cloud-native
   infrastructure.
 
   Company context -
-  CodeRabbit is an AI-powered Code reviewer.It boosts code quality and cuts manual effort. Offers context-aware, line-by-line feedback, highlights critical changes,
+  CodeBot is an AI-powered Code reviewer.It boosts code quality and cuts manual effort. Offers context-aware, line-by-line feedback, highlights critical changes,
   enables bot interaction, and lets you commit suggestions directly from GitHub.
 
   When reviewing or generating content focus on key areas such as -
@@ -157,15 +149,15 @@ system_message: |
 
 </details>
 
-## Conversation with CodeRabbit
+## Conversation with CodeBot
 
 You can reply to a review comment made by this action and get a response based
 on the diff context. Additionally, you can invite the bot to a conversation by
-tagging it in the comment (`@coderabbitai`).
+tagging it in the comment (`@CodeBot`).
 
 Example:
 
-> @coderabbitai Please generate a test plan for this file.
+> @CodeBot Please generate a test plan for this file.
 
 Note: A review comment is a comment made on a diff or a file in the pull
 request.
@@ -177,7 +169,7 @@ to review documentation, you can ignore PRs that only change the documentation.
 To ignore a PR, add the following keyword in the PR description:
 
 ```text
-@coderabbitai: ignore
+@CodeBot: ignore
 ```
 
 ## Examples
@@ -247,7 +239,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: coderabbitai/ai-pr-reviewer@latest
+      - uses: codevergehq/ai-pr-reviewer@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
