@@ -2,7 +2,7 @@ name: 'AI-based PR Reviewer & Summarizer with Chat Capabilities'
 description: 'AI-based PR Reviewer & Summarizer with Chat Capabilities'
 branding:
   icon: 'git-merge'
-  color: 'orange'
+  color: 'blue'
 author: 'Codeverge GmbH'
 inputs:
   debug:
@@ -241,5 +241,5 @@ inputs:
       '<img src="https://avatars.githubusercontent.com/u/171002666?v=4"
       alt="Image description" width="20" height="20">'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
