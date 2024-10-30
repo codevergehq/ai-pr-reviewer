@@ -457,17 +457,6 @@ ${RAW_SUMMARY_END_TAG}
 ${SHORT_SUMMARY_START_TAG}
 ${inputs.shortSummary}
 ${SHORT_SUMMARY_END_TAG}
-
----
-
-<details>
-<summary>Uplevel your code reviews with CodeBot Pro</summary>
-
-### CodeBot Pro
-
-If you like this project, please support us by purchasing the [Pro version](https://CodeBot.ai). The Pro version has advanced context, superior noise reduction and several proprietary improvements compared to the open source version. Moreover, CodeBot Pro is free for open source projects.
-
-</details>
 `
 
   statusMsg += `
@@ -723,7 +712,7 @@ ${
 <details>
 <summary>Tips</summary>
 
-### Chat with <img src="https://avatars.githubusercontent.com/in/347564?s=41&u=fad245b8b4c7254fe63dd4dcd4d662ace122757e&v=4" alt="Image description" width="20" height="20">  CodeBot Bot (\`@CodeBot\`)
+### Chat with <img src="https://avatars.githubusercontent.com/u/171002666?v=4" alt="Image description" width="20" height="20">  CodeBot (\`@CodeBot\`)
 - Reply on review comments left by this bot to ask follow-up questions. A review comment is a comment on a diff or a file.
 - Invite the bot into a review comment chain by tagging \`@CodeBot\` in a reply.
 
