@@ -456,7 +456,7 @@ ${inputs.rawSummary}
 ${RAW_SUMMARY_END_TAG}
 ${SHORT_SUMMARY_START_TAG}
 ${inputs.shortSummary}
-${SHORT_SUMMARY_END_TAG}
+${SHORT_SUMMARY_END_TAG}q
 `
 
   statusMsg += `
